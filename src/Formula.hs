@@ -1,4 +1,4 @@
-module Formula(Form) where
+module Formula(Form(..)) where
 
 import qualified TermF
 import qualified Data.List.NonEmpty as LN
