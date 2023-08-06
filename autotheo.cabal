@@ -6,9 +6,9 @@ cabal-version: 1.12
 
 name:           autotheo
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/autotheo#readme>
-homepage:       https://github.com/githubuser/autotheo#readme
-bug-reports:    https://github.com/githubuser/autotheo/issues
+description:    Please see the README on GitHub at <https://github.com/Viva-Lambda/autotheo.git#readme>
+homepage:       https://github.com/Viva-Lambda/autotheo#readme
+bug-reports:    https://github.com/Viva-Lambda/autotheo/issues
 author:         Viva Lambda
 maintainer:     example@example.com
 copyright:      2023 Viva Lambda
@@ -21,11 +21,13 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/autotheo
+  location: https://github.com/Viva-Lambda/autotheo
 
 library
   exposed-modules:
+      Formula
       Lib
+      Substitute
       TermF
       Utils
   other-modules:
@@ -34,7 +36,7 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      base >=4.16 && <5
   default-language: Haskell2010
 
 executable autotheo-exe
@@ -46,7 +48,7 @@ executable autotheo-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       autotheo
-    , base >=4.7 && <5
+    , base >=4.16 && <5
   default-language: Haskell2010
 
 test-suite autotheo-test
@@ -59,5 +61,5 @@ test-suite autotheo-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       autotheo
-    , base >=4.7 && <5
+    , base >=4.16 && <5
   default-language: Haskell2010
