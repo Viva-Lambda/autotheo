@@ -39,3 +39,17 @@ showFormLst :: LN.NonEmpty Form -> String
 showFormLst fs = let strs = LN.toList ( LN.map show fs)
                      commas = intercalate "," strs
                  in commas
+
+-- a function that finds variables with free occurrences in a formula. It
+-- specifies places in an expression where substitution may take place. In
+-- programming, a free variable is neither a local variable inside a function
+-- nor a parameter of that function. It is a non local variable.
+-- The clear way to solve this is to make an abstract binding tree for
+-- variables and check for free occurrences of a given variable
+freeVarsInForm :: Form -> [TermF.Id]
+freeVarsInForm (Atomic i) = [i]
+freeVarsInForm (Atom i ts) = let lst = (LN.toList (varsInTerms ts))
+                             in nub lst
+freeVarsInForm (Eq i j) = let ivars = (LN.toList (varsInTerm i))
+                              jvars = (LN.toList (varsInTerm j))
+                             in nub lst

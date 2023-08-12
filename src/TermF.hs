@@ -1,4 +1,5 @@
-module TermF (Name, Index, Id(..), Term(..), isVar) where
+module TermF (Name, Index, Id(..), Term(..), 
+              isVar, varsInTerm, varsInTerms) where
 
 import qualified Data.List.NonEmpty as LN
 import Utils
